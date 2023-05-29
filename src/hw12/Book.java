@@ -32,16 +32,12 @@ public class Book {
     }
 
     @Override
-    public String toString() {
-        return "Автор книги: " + author + " Название книги: " + bookName + '\'' + " Год издания: " + publishingYear;
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
         Book book = (Book) o;
-        return getPublishingYear() == book.getPublishingYear() && Objects.equals(getAuthor(), book.getAuthor()) && Objects.equals(getBookName(), book.getBookName());
+        return getPublishingYear() == book.getPublishingYear() && Objects.equals(getAuthor(),
+                book.getAuthor()) && Objects.equals(getBookName(), book.getBookName());
     }
 
     @Override
@@ -49,8 +45,9 @@ public class Book {
         return Objects.hash(getAuthor(), getBookName(), getPublishingYear());
     }
 
-    void printBook() {
-        System.out.println("Автор: " + getAuthor() + " Название книги: " + getBookName() + " Изданна в: " + getPublishingYear());
+    @Override
+    public String toString() {
+        return("Автор: " + getAuthor() + " Название книги: " + getBookName() + " Изданна в: " + getPublishingYear());
 
     }
 }

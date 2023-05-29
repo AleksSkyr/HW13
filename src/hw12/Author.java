@@ -25,10 +25,6 @@ public class Author {
         this.surname = surname;
     }
 
-    public String foolAuthor() {
-        return name + " " + surname;
-    }
-
     @Override
     public String toString() {
         return name + " " + surname ;
