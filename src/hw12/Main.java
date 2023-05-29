@@ -24,6 +24,10 @@ public class Main {
         nineteenEightyFour.printBook();
         theMountainsOfMadness.printBook();
 
+        System.out.println(nineteenEightyFour.equals(theMountainsOfMadness));
+        System.out.println(nineteenEightyFour.hashCode());
+        System.out.println(theMountainsOfMadness.hashCode());
+
 
     }
 }
