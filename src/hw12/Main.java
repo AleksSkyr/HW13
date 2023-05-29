@@ -18,15 +18,20 @@ public class Main {
         System.out.println("Автор: " + author1 + " Название книги: "
                 + nineteenEightyFour.getBookName() + " Изданна в: " + nineteenEightyFour.getPublishingYear());
 
-        System.out.println("Автор: " + author.foolAuthor());
-        System.out.println("Автор: " + author1.foolAuthor());
+        System.out.println("Автор: " + author.toString());
+        System.out.println("Автор: " + author1.toString());
 
-        nineteenEightyFour.printBook();
-        theMountainsOfMadness.printBook();
+        System.out.println(nineteenEightyFour.toString());
+        System.out.println(theMountainsOfMadness.toString());
 
-        System.out.println(nineteenEightyFour.equals(theMountainsOfMadness));
-        System.out.println(nineteenEightyFour.hashCode());
-        System.out.println(theMountainsOfMadness.hashCode());
+        System.out.println(nineteenEightyFour.equals(nineteenEightyFour));
+        System.out.println(theMountainsOfMadness.equals(theMountainsOfMadness));
+
+        System.out.println(nineteenEightyFour.getAuthor() + " " + author.hashCode());
+        System.out.println(theMountainsOfMadness.getAuthor() + " " + author1.hashCode());
+
+        System.out.println(nineteenEightyFour.getBookName() + " " + nineteenEightyFour.hashCode());
+        System.out.println(theMountainsOfMadness.getBookName() + " " + theMountainsOfMadness.hashCode());
 
 
     }
